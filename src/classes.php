@@ -61,7 +61,7 @@ class estimator {
         if ($this->periodType == 'weeks') {
               $days = $this->timeToElapse * 7;
           }elseif($this->periodType == 'months'){
-              $days = $this->timeToElapse * 30;;
+              $days = $this->timeToElapse * 30;
           }else{
             $days = $this->timeToElapse;
         }
@@ -111,7 +111,7 @@ class estimator {
       if ($this->periodType == 'weeks') {
             $days = $this->timeToElapse * 7;
         }elseif($this->periodType == 'months'){
-            $days = $this->timeToElapse * 30;;
+            $days = $this->timeToElapse * 30;
         }else{
           $days = $this->timeToElapse;
       }

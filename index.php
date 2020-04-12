@@ -20,10 +20,8 @@ if (isset($_POST['data-go-estimate'])) {
         'reportedCases' => $repotedCases,
         'population' => $population,
         'totalHospitalBeds' => $totalHospitalBeds,
-    );
-    
+    );    
 }
-
 
 ?>
 
