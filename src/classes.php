@@ -144,7 +144,6 @@ class estimator {
         'casesForICUByRequestedTime' => $casesForICUByRequestedTime,
         'casesForVentilatorsByRequestedTime' => $casesForVentilatorsByRequestedTime,
         'dollarsInFlight' => $dollarsInFlight,
-        'days' => $days,
       );
   
       return $this->severeImpact;
