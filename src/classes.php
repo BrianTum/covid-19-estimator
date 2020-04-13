@@ -46,7 +46,11 @@ class estimator {
           'totalHospitalBeds' => $this->totalHospitalBeds,
       );
       return $this->input;
-    }  
+    } 
+    
+    public function getDays(){
+        return $this->timeToElapse;
+    }
     
   }
 
@@ -68,7 +72,7 @@ class estimator {
     
         $currentlyInfected = $this->reportedCases * 10;
         
-        $infectionsByRequestedTime = intval($currentlyInfected * pow(2, ($days / 3))) ;
+        $infectionsByRequestedTime = intval($currentlyInfected * pow(2, intval($days / 3))) ;
         
         $severeCasesByRequestedTime = intval($infectionsByRequestedTime * 0.15) ;
         
@@ -118,7 +122,7 @@ class estimator {
   
       $currentlyInfected = $this->reportedCases * 50;
   
-      $infectionsByRequestedTime = intval($currentlyInfected * pow(2, ($days / 3))) ;
+      $infectionsByRequestedTime = intval($currentlyInfected * pow(2, intval($days / 3))) ;
   
       $severeCasesByRequestedTime = intval($infectionsByRequestedTime * 0.15) ;
   
@@ -139,7 +143,8 @@ class estimator {
         'hospitalBedsByRequestedTime' => $hospitalBedsByRequestedTime,
         'casesForICUByRequestedTime' => $casesForICUByRequestedTime,
         'casesForVentilatorsByRequestedTime' => $casesForVentilatorsByRequestedTime,
-        'dollarsInFlight' => $dollarsInFlight
+        'dollarsInFlight' => $dollarsInFlight,
+        'days' => $days,
       );
   
       return $this->severeImpact;

@@ -1,5 +1,6 @@
 <?php
 include_once "src/estimator.php";
+include_once "src/classes.php";
 
 if (isset($_POST['data-go-estimate'])) {
     $population = $_POST['data-population'];
@@ -20,7 +21,7 @@ if (isset($_POST['data-go-estimate'])) {
         'reportedCases' => $repotedCases,
         'population' => $population,
         'totalHospitalBeds' => $totalHospitalBeds,
-    );    
+    );
 }
 
 ?>
