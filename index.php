@@ -34,109 +34,35 @@ if (isset($_POST['data-go-estimate'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Covid-19 Estimator for Building SDG Challenge">
 <meta name="author" content="BrianTum">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
 <style>
-html{
-  scroll-behavior: smooth;
-}
-body {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-}
-
-header.masthead {
-  position: relative;
-  background-color: darkcyan;
-  background: no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  height: 100vh;
-}
-
-header.masthead .overlay {
-  position: absolute;
-  background-color: #212529;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-header.masthead h1 {
-  font-size: 2rem;
-}
-
-@media (min-width: 768px) {
-  header.masthead {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-  }
-  header.masthead h1 {
-    font-size: 3rem;
-  }
-}
-
-.features-icons {
-  position: relative;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-}
-
-.float{
-	position:absolute;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#0C9;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-	box-shadow: 2px 2px 3px #999;
-}
-
-.my-float{
-	margin-top:22px;
-}
+html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif}h1,h2,h3,h4,h5,h6{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}@font-face{font-family:Lato;font-style:italic;font-weight:700;src:local('Lato Bold Italic'),local('Lato-BoldItalic'),url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}header.masthead{position:relative;background-color:#008b8b;background:no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding-top:8rem;padding-bottom:8rem;height:100vh}header.masthead .overlay{position:absolute;background-color:#212529;height:100%;width:100%;top:0;left:0}header.masthead h1{font-size:2rem}@media (min-width:768px){header.masthead{padding-top:12rem;padding-bottom:12rem}header.masthead h1{font-size:3rem}}.features-icons{position:relative;padding-top:7rem;padding-bottom:7rem}.float{position:absolute;width:60px;height:60px;bottom:40px;right:40px;background-color:#0c9;color:#fff;border-radius:50px;text-align:center;box-shadow:2px 2px 3px #999}.my-float{margin-top:22px}
 </style>
 </head>
 <body translate="no">
 <html lang="en">
 <body>
-
 <header class="masthead text-white text-center">
     <div class="overlay"></div>
     <div class="container">
-        <div class="row">
+        <div class="row neumorphism-1">
             <div class="col-xl-9 mx-auto">
             <h1 class="mb-5">Estimator</h1><br>
-            <h2>Enter the values below to estimate</h2>
+            <h4>Kindly fill this form</h4>
             </div>
             <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <div class="form-row" >
                         <label for="data-population" class="col-md-2">
+                            Population
                             <input required class="form-control form-control-sm" type="number" name="data-population" placeholder="Population">
                         </label>
                         <label for="data-time-to-elapse" class="col-md-2">
+                            Time
                             <input required class="form-control form-control-sm" type="number" name="data-time-to-elapse" placeholder="Time">
                         </label>
                         <label for="data-period-type" class="col-md-2">
+                            Period
                             <select required class="form-control form-control-sm" name="data-period-type">
                                 <option value="days">Days</option>
                                 <option value="weeks">Weeks</option>
@@ -144,9 +70,11 @@ header.masthead h1 {
                             </select>
                         </label>
                         <label for="data-reported-cases" class="col-md-3">
+                            Reported Cases
                             <input required class="form-control form-control-sm" type="number" name="data-reported-cases" placeholder="Repoted Cases">
                         </label>
                         <label for="data-total-hospital-beds" class="col-md-3">
+                            Hospital Beds
                             <input required class="form-control form-control-sm" type="number" name="data-total-hospital-beds" placeholder="Hospital Beds">
                         </label>
                     </div>
@@ -154,16 +82,15 @@ header.masthead h1 {
                         <button type="submit" class="btn btn-block btn-md btn-primary col-md-12" name="data-go-estimate"><h4>Submit</h4></button>                        
                     </div>
                 </form>
-                <?php
-                if (isset($_POST['data-go-estimate'])){
-                ?>
-                <button><a href="#section2">View Results</a></button>
-                <?php
-                }
-                ?>
             </div>
         </div>
     </div>
+    <?php
+    if (isset($_POST['data-go-estimate'])){ ?>
+    <a href="#section2" class="float">
+      <i class="fa fa-arrow-down my-float"></i>
+    </a>
+    <?php }  ?>
 </header>
 
 <?php 
