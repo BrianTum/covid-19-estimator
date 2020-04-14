@@ -34,8 +34,9 @@ if (isset($_POST['data-go-estimate'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Covid-19 Estimator for Building SDG Challenge">
 <meta name="author" content="BrianTum">
+<link rel='stylesheet' href='src/css/main.css'>
 <style>
-html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif}h1,h2,h3,h4,h5,h6{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}@font-face{font-family:Lato;font-style:italic;font-weight:700;src:local('Lato Bold Italic'),local('Lato-BoldItalic'),url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}header.masthead{position:relative;background-color:#008b8b;background:no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding-top:8rem;padding-bottom:8rem;height:100vh}header.masthead .overlay{position:absolute;background-color:#212529;height:100%;width:100%;top:0;left:0}header.masthead h1{font-size:2rem}@media (min-width:768px){header.masthead{padding-top:12rem;padding-bottom:12rem}header.masthead h1{font-size:3rem}}.features-icons{position:relative;padding-top:7rem;padding-bottom:7rem}.float{position:absolute;width:60px;height:60px;bottom:40px;right:40px;background-color:#0c9;color:#fff;border-radius:50px;text-align:center;box-shadow:2px 2px 3px #999}.my-float{margin-top:22px}
+html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif}h1,h2,h3,h4,h5,h6{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}@font-face{font-family:Lato;font-style:italic;font-weight:700;src:local('Lato Bold Italic'),local('Lato-BoldItalic'),url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}header.masthead{position:relative;background-color:#008b8b;background:no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding-top:8rem;padding-bottom:8rem;height:100vh}header.masthead .overlay{position:absolute;background-color:#212529;height:100%;width:100%;top:0;left:0}header.masthead h1{font-size:2rem}@media (min-width:768px){header.masthead{padding-top:12rem;padding-bottom:12rem}header.masthead h1{font-size:3rem}}.features-icons{position:relative;padding-top:7rem;padding-bottom:7rem; background-color:white;}.float{position:absolute;width:60px;height:60px;bottom:40px;right:40px;background-color:#0c9;color:#fff;border-radius:50px;text-align:center;box-shadow:2px 2px 3px #999}.my-float{margin-top:22px}
 </style>
 </head>
 <body translate="no">
@@ -46,7 +47,7 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
     <div class="container">
         <div class="row neumorphism-1">
             <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">Estimator</h1><br>
+            <h2 class="mb-5">Covid-19 Estimator</h2><br>
             <h4>Kindly fill this form</h4>
             </div>
             <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
@@ -87,7 +88,7 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
     <?php
     if (isset($_POST['data-go-estimate'])){ ?>
     <a href="#section2" class="float">
-      <i class="fa fa-arrow-down my-float"></i>
+      Scroll Down
     </a>
     <?php }  ?>
 </header>
@@ -100,7 +101,7 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
   <div class="container">
     <div class="row">
       <div class="table-responsive">
-        <table class="table table-sm table-hover table-striped">
+        <table class="table table-sm table-hover table-striped" style="width:75vw">
           <tbody>
             <thead>
               <td colspan="4"><h2>Input Data</h2></td>
@@ -138,7 +139,7 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
     <div class="row">
     <div class="table-responsive">
           <h1>Results</h1>
-          <table class="table table-sm table-striped table-hover table-dark">
+          <table class="table table-sm table-striped table-hover table-dark" style="width:75vw">
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -187,9 +188,7 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
         </div>
     </div>
   </div>
-  <a href="#" class="float">
-    <i class="fa fa-calculator my-float"></i>
-  </a>
+  <a href="#" class="float"><h5>scroll up</h5></a>
 </section>
 <?php } ?>
 <script>
