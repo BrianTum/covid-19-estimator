@@ -48,7 +48,7 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
         <div class="row neumorphism-1">
             <div class="col-xl-9 mx-auto">
             <h2 class="mb-5">Covid-19 Estimator</h2><br>
-            <h4>Kindly fill this form</h4>
+            <h4>Kindly fill this form.</h4>
             </div>
             <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">>
