@@ -55,15 +55,15 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
                     <div class="form-row" >
                         <label for="data-population" class="col-md-2">
                             Population
-                            <input required data-attribute="data-population" class="form-control form-control-sm" type="number" name="data-population" placeholder="Population">
+                            <input required data-population="" class="form-control form-control-sm" type="number" name="data-population" placeholder="Population">
                         </label>
                         <label for="data-time-to-elapse" class="col-md-2">
                             Time
-                            <input required data-attribute="data-time-to-elapse" class="form-control form-control-sm" type="number" name="data-time-to-elapse" placeholder="Time">
+                            <input required data-time-to-elapse="" class="form-control form-control-sm" type="number" name="data-time-to-elapse" placeholder="Time">
                         </label>
                         <label for="data-period-type" class="col-md-2">
                             Period
-                            <select required data-attribute="data-period-type" class="form-control form-control-sm" name="data-period-type">
+                            <select required data-period-type="" class="form-control form-control-sm" name="data-period-type">
                                 <option value="days">Days</option>
                                 <option value="weeks">Weeks</option>
                                 <option value="months">Months</option>
@@ -71,15 +71,15 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
                         </label>
                         <label for="data-reported-cases" class="col-md-3">
                             Reported Cases
-                            <input required data-attribute="data-reported-cases" class="form-control form-control-sm" type="number" name="data-reported-cases" placeholder="Repoted Cases">
+                            <input required data-reported-cases="" class="form-control form-control-sm" type="number" name="data-reported-cases" placeholder="Repoted Cases">
                         </label>
                         <label for="data-total-hospital-beds" class="col-md-3">
                             Hospital Beds
-                            <input required data-attribute="data-total-hospital-beds" class="form-control form-control-sm" type="number" name="data-total-hospital-beds" placeholder="Hospital Beds">
+                            <input required data-total-hospital-beds="" class="form-control form-control-sm" type="number" name="data-total-hospital-beds" placeholder="Hospital Beds">
                         </label>
                     </div>
                     <div class="row">
-                        <button type="submit" data-attribute="data-go-estimate" class="btn btn-block btn-md btn-primary col-md-12" name="data-go-estimate"><h4>Submit</h4></button>                        
+                        <button type="submit" data-go-estimate="" class="btn btn-block btn-md btn-primary col-md-12" name="data-go-estimate"><h4>Submit</h4></button>                        
                     </div>
                 </form>
             </div>
