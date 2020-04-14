@@ -79,7 +79,7 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
                         </label>
                     </div>
                     <div class="row">
-                        <button type="submit" class="btn btn-block btn-md btn-primary col-md-12" name="data-go-estimate"><h4>Submit</h4></button>                        
+                        <button type="submit" readonly class="btn btn-block btn-md btn-primary col-md-12" name="data-go-estimate"><h4>Submit</h4></button>                        
                     </div>
                 </form>
             </div>
