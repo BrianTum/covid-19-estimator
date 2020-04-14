@@ -51,7 +51,7 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
             <h4>Kindly fill this form</h4>
             </div>
             <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">>
                     <div class="form-row" >
                         <label for="data-population" class="col-md-2">
                             Population
@@ -63,7 +63,7 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
                         </label>
                         <label for="data-period-type" class="col-md-2">
                             Period
-                            <select required class="form-control form-control-sm" name="data-period-type">
+                            <select required  class="form-control form-control-sm" name="data-period-type">
                                 <option value="days">Days</option>
                                 <option value="weeks">Weeks</option>
                                 <option value="months">Months</option>
