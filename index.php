@@ -75,7 +75,6 @@ header.masthead .overlay {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.3;
 }
 
 header.masthead h1 {
@@ -115,14 +114,6 @@ header.masthead h1 {
 	margin-top:22px;
 }
 </style>
-<script>
-  window.console = window.console || function(t) {};
-</script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
 </head>
 <body translate="no">
 <html lang="en">
@@ -139,30 +130,37 @@ header.masthead h1 {
             <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <div class="form-row" >
-                        <label for="population" class="col-md-2">
+                        <label for="data-population" class="col-md-2">
                             <input required class="form-control form-control-sm" type="number" name="data-population" placeholder="Population">
                         </label>
-                        <label for="time" class="col-md-2">
+                        <label for="data-time-to-elapse" class="col-md-2">
                             <input required class="form-control form-control-sm" type="number" name="data-time-to-elapse" placeholder="Time">
                         </label>
-                        <label for="period" class="col-md-2">
+                        <label for="data-period-type" class="col-md-2">
                             <select required class="form-control form-control-sm" name="data-period-type">
                                 <option value="days">Days</option>
                                 <option value="weeks">Weeks</option>
                                 <option value="months">Months</option>
                             </select>
                         </label>
-                        <label for="reported cases" class="col-md-3">
+                        <label for="data-reported-cases" class="col-md-3">
                             <input required class="form-control form-control-sm" type="number" name="data-reported-cases" placeholder="Repoted Cases">
                         </label>
-                        <label for="hospital beds" class="col-md-3">
+                        <label for="data-total-hospital-beds" class="col-md-3">
                             <input required class="form-control form-control-sm" type="number" name="data-total-hospital-beds" placeholder="Hospital Beds">
                         </label>
                     </div>
                     <div class="row">
-                        <button type="submit" class="btn btn-block btn-md btn-primary col-md-12" name="data-go-estimate">Submit</button>                        
+                        <button type="submit" class="btn btn-block btn-md btn-primary col-md-12" name="data-go-estimate"><h4>Submit</h4></button>                        
                     </div>
                 </form>
+                <?php
+                if (isset($_POST['data-go-estimate'])){
+                ?>
+                <button><a href="#section2">View Results</a></button>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -172,7 +170,6 @@ header.masthead h1 {
   if (isset($_POST['data-go-estimate'])){
       $data = covid19ImpactEstimator($data);
   ?>
-
 <section class="features-icons bg-light text-center" id="section2">
   <div class="container">
     <div class="row">
@@ -210,6 +207,7 @@ header.masthead h1 {
         </table>
       </div>         
     </div>
+    <hr>
 
     <div class="row">
     <div class="table-responsive">
@@ -282,4 +280,3 @@ header.masthead h1 {
 </script>
 </body>
 </html>
-
