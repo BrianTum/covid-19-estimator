@@ -55,15 +55,15 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
                     <div class="form-row" >
                         <label for="data-population" class="col-md-2">
                             Population
-                            <input required class="form-control form-control-sm" type="number" name="data-population" placeholder="Population">
+                            <input required readonly class="form-control form-control-sm" type="number" name="data-population" placeholder="Population">
                         </label>
                         <label for="data-time-to-elapse" class="col-md-2">
                             Time
-                            <input required class="form-control form-control-sm" type="number" name="data-time-to-elapse" placeholder="Time">
+                            <input required readonly class="form-control form-control-sm" type="number" name="data-time-to-elapse" placeholder="Time">
                         </label>
                         <label for="data-period-type" class="col-md-2">
                             Period
-                            <select required class="form-control form-control-sm" name="data-period-type">
+                            <select required readonly class="form-control form-control-sm" name="data-period-type">
                                 <option value="days">Days</option>
                                 <option value="weeks">Weeks</option>
                                 <option value="months">Months</option>
@@ -71,11 +71,11 @@ html{scroll-behavior:smooth}body{font-family:Lato,'Helvetica Neue',Helvetica,Ari
                         </label>
                         <label for="data-reported-cases" class="col-md-3">
                             Reported Cases
-                            <input required class="form-control form-control-sm" type="number" name="data-reported-cases" placeholder="Repoted Cases">
+                            <input required readonly class="form-control form-control-sm" type="number" name="data-reported-cases" placeholder="Repoted Cases">
                         </label>
                         <label for="data-total-hospital-beds" class="col-md-3">
                             Hospital Beds
-                            <input required class="form-control form-control-sm" type="number" name="data-total-hospital-beds" placeholder="Hospital Beds">
+                            <input required readonly class="form-control form-control-sm" type="number" name="data-total-hospital-beds" placeholder="Hospital Beds">
                         </label>
                     </div>
                     <div class="row">
